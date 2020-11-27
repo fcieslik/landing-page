@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Good day!</title>
+    <link rel="stylesheet" href="styles/sass/main.scss" />
+  </head>
+  <body class="container">
+    <section class="main-page">
+      <div class="quotes"></div>
+      <div class="clock">
+        <div class="clock__greeting">
+          <img class="clock__greeting-icon" src="./assets/icons/unknown.svg" alt="sun icon" />
+          <p class="clock__text"></p>
+        </div>
+        <span class="clock__time"></span><span class="clock__abbreviation"></span>
+        <p class="clock__time-text">in Jaworzno, PL</p>
+      </div>
+      <div class="more">
+        <div class="more__btn-wrapper"
+          ><span class="more__btn-text">MORE</span>
+          <span class="more__bubble"><img class="" src="./assets/icons/up.svg" alt="up arrow" /></span
+        ></div>
+      </div>
+    </section>
+    <div class="more-panel">
+      <div class="calendar">
+        <div class="calendar__item">
+          <p>DAY OF THE WEEK</p>
+          <p class="calendar__week-day"></p>
+        </div>
+        <div class="calendar__item">
+          <p>DAY OF THE YEAR</p>
+          <p class="calendar__year-day"></p>
+        </div>
+        <div class="calendar__item">
+          <p>WEEK NUMBER</p>
+          <p class="calendar__week-number"></p>
+        </div>
+        <div class="calendar__item">
+          <p>TILL YEAR END</p>
+          <p class="calendar__year-end"></p>
+        </div>
+      </div>
+      <div class="currency">
+        <div>
+          <p class="currency__header">CURRENT CURRENCY RATIO</p>
+          <div class="currency__base">
+            <span>BASE CURRENCY -</span>
+            <img class="currency__icon" src="./assets/icons/pln.svg" alt="pln currency icon" />
+          </div>
+          <div class="currency__values">
+            <div class="currency__ratio">
+              <img class="currency__icon" src="./assets/icons/eu.svg" alt="eu currency icon" />
+              <p class="currency__eur">- 4.223</p>
+            </div>
+            <div class="currency__ratio">
+              <img class="currency__icon" src="./assets/icons/usa.svg" alt="usa currency icon" />
+              <p class="currency__usd">- 4.111</p>
+            </div>
+          </div>
+        </div>
+        <div class="currency-converter">
+          <div class="currency-converter__enter">
+            <input type="number" value="1.00">
+            <select name="converter" id="converter">
+              <option value="PLN">
+                PLN
+              </option>
+              <option value="USD">
+                USD
+              </option>
+              <option value="EUR">
+                EUR
+              </option>
+            </select>
+          </div>
+          <div class="currency-converter__result">
+            <p class="currency-converter__first-result"></p>
+            <p class="currency-converter__second-result"></p>
+          </div>
+        </div>
+      </div>
+      <div class="weather">
+        <p>Current weather</p>
+        <div class="weather__temperature">
+          <p>Avg<span class="weather__average weather__values"></span>celcius</p>
+          <p>Max<span class="weather__max weather__values"></span>celcius</p>
+          <p>Min<span class="weather__min weather__values"></span>celcius</p>
+          <p>Feels like<span class="weather__feels weather__values"></span>celcius</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/more-panel.js"></script>
+    <script src="./scripts/location.js"></script>
+  </body>
+</html>

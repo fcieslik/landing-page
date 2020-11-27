@@ -1,0 +1,54 @@
+@mixin small {
+  font-size: 12px;
+}
+
+@mixin small-medium {
+  font-size: 14px;
+}
+
+@mixin medium {
+  font-size: 16px;
+}
+
+@mixin large {
+  font-size: 18px;
+}
+
+@mixin xlarge {
+  font-size: 20px;
+}
+
+@mixin xxlarge {
+  font-size: 24px;
+}
+
+@mixin small-medium-bold {
+  @include small-medium;
+  font-weight: 700;
+}
+
+@mixin medium-bold {
+  @include medium;
+  font-weight: 700;
+}
+
+@mixin large-bold {
+  @include large;
+  font-weight: 700;
+}
+
+@mixin xlarge-bold {
+  @include xlarge;
+  font-weight: 700;
+}
+
+@mixin xxlarge-bold {
+  @include xxlarge;
+  font-weight: 700;
+}
+
+
+@mixin time-font {
+  font-weight: 700;
+  font-size: 124px;
+}

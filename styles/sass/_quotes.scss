@@ -1,0 +1,15 @@
+.quotes {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  display: grid;
+  grid-gap: 8px;
+
+  &__quote {
+    @include xxlarge;
+    font-weight: 200;
+  }
+
+  &__author {
+    @include large-bold;
+  }
+}

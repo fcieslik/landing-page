@@ -1,0 +1,28 @@
+@import 'reset';
+@import 'theme';
+@import 'typography';
+@import 'calendar';
+@import 'clock';
+@import 'quotes';
+@import "more-panel";
+@import "currency";
+@import "weather";
+
+body {
+  //background: url('../../assets/img/city.jpg') no-repeat center center fixed;
+  background: lightgray;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
+
+.main-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.6);
+  padding: 32px 64px;
+  align-items: center;
+}

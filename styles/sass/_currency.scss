@@ -1,0 +1,64 @@
+.currency {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 24px;
+  color: black;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  @include medium;
+  font-weight: 200;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+
+  &__header {
+    padding: 8px;
+  }
+
+  &__values {
+    padding: 8px;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+    grid-gap: 16px;
+  }
+
+  &__ratio {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 16px;
+  }
+
+  &__base {
+    padding: 8px;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 16px;
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+
+.currency-converter {
+  display: grid;
+  grid-gap: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}

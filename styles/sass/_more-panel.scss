@@ -1,0 +1,66 @@
+.more {
+  grid-column: 2 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+
+  &__btn-wrapper {
+    cursor: pointer;
+    @include medium-bold;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border: none;
+    background-color: #fffffff2;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 8px 16px;
+    justify-content: space-between;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  &__bubble {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div:hover {
+    transform: scale(1.03);
+  }
+}
+
+.more-open {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.more-panel {
+  background-color: #f3efeff0;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 45vh;
+  display: none;
+}
+
+.open {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 16px 0;
+}

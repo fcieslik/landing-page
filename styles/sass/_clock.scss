@@ -1,0 +1,27 @@
+.clock {
+  grid-column: 1 / 2;
+  grid-row: 2;
+
+  &__text, &__abbreviation {
+    @include xxlarge;
+  }
+
+  &__time {
+    @include time-font;
+  }
+
+  &__time-text {
+    @include xxlarge-bold
+  }
+
+  &__greeting-icon {
+    height: 50px;
+  }
+
+  &__greeting {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    grid-gap: 16px;
+  }
+}
