@@ -1,6 +1,6 @@
 import { getCurrentWatherFor } from './weather';
 
-const geoLocationKey = 'cc6c29b2dcadb94d4491893a45a5fe37';
+const geoLocationKey = 'at_BMpJ9wB423aAcvoUwkiVbMxnLBGOo';
 const locationEl = document.querySelector('.clock__time-text');
 const maxTempEl = document.querySelector('.weather__max');
 const minTempEl = document.querySelector('.weather__min');
@@ -12,15 +12,19 @@ function errorHandler(error) {
 }
 
 async function getUserLocation() {
-  const response = await fetch(`http://api.ipstack.com/check?access_key=${geoLocationKey}`);
-  const data = await response.json();
+  const ipv4Regex = /^(?:ip)=(.*)$/gm;
 
-  return data;
-  // return { city: 'Kraków', country_code: 'PL' };
+  const ipInformation = await fetch('https://www.cloudflare.com/cdn-cgi/trace');
+  const ipAdress = (await ipInformation.text()).match(ipv4Regex)[0].slice(3);
+
+  const locationResponse = await fetch(`https://ip-geolocation.whoisxmlapi.com/api/v1?apiKey=${geoLocationKey}&ipAddress=${ipAdress}`);
+  const locationData = await locationResponse.json();
+
+  return locationData.location;
 }
 
 async function adjustLocationName(location) {
-  locationEl.textContent = `in ${location.city}, ${location.country_code}`;
+  locationEl.textContent = `in ${location.city}, ${location.country}`;
   const weather = await getCurrentWatherFor(location.city);
 
   return weather;

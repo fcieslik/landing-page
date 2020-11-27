@@ -1,6 +1,6 @@
 import sunUrl from '../assets/icons/sun.svg';
 import moonUrl from '../assets/icons/moon.svg';
-import {setWallpaperFor} from "./wallpaper";
+import { setWallpaperFor } from './wallpaper';
 import cityNight from '../assets/img/city_night.jpg';
 import cityMorning from '../assets/img/city_morning.jpg';
 import cityAfternoon from '../assets/img/city__afternoon.jpg';
@@ -15,7 +15,6 @@ const clockAbbreviation = document.querySelector('.clock__abbreviation');
 const clockText = document.querySelector('.clock__text');
 const dayTimeIcon = document.querySelector('.clock__greeting-icon');
 
-// Concatenate a zero to the left of every single digit time frame
 function concatZero(timeFrame) {
   return timeFrame < 10 ? '0'.concat(timeFrame) : timeFrame;
 }
