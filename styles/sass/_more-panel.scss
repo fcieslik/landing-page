@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: end;
+  align-self: end;
 
   &__btn-wrapper {
     cursor: pointer;
@@ -43,6 +44,7 @@
 .more-open {
   grid-column: 2 / -1;
   grid-row: 1;
+  align-self: center;
 }
 
 .more-panel {
@@ -63,4 +65,12 @@
   align-items: center;
   justify-items: center;
   padding: 16px 0;
+}
+
+
+@include mediumViewport  {
+  .more {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }

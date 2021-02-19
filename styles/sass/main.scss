@@ -7,14 +7,13 @@
 @import "more-panel";
 @import "currency";
 @import "weather";
+@import "breakpoints";
 
 body {
-  //background: url('../../assets/img/city.jpg') no-repeat center center fixed;
   background: lightgray;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 100%;
 }
 
 .main-page {
@@ -25,4 +24,15 @@ body {
   background-color: rgba(46, 46, 46, 0.6);
   padding: 32px 64px;
   align-items: center;
+}
+
+
+@include mediumViewport  {
+  .main-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr max-content;
+    padding: 8px;
+    grid-gap: 28px;
+    height: 100vh;
+  }
 }

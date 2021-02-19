@@ -1,6 +1,9 @@
+@import "breakpoints";
+
 .clock {
   grid-column: 1 / 2;
   grid-row: 2;
+  align-self: end;
 
   &__text, &__abbreviation {
     @include xxlarge;
@@ -23,5 +26,12 @@
     grid-template-columns: max-content 1fr;
     align-items: center;
     grid-gap: 16px;
+  }
+}
+
+@include mediumViewport  {
+  .clock {
+    grid-column: 1;
+    grid-row: 2;
   }
 }

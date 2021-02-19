@@ -7,9 +7,25 @@
   &__quote {
     @include xxlarge;
     font-weight: 200;
+    font-size: 24px;
   }
 
   &__author {
     @include large-bold;
+  }
+}
+
+@include mediumViewport  {
+  .quotes {
+    grid-column: 1;
+    grid-row: 1;
+
+    &__quote {
+      @include large;
+    }
+
+    &__author {
+      @include small-medium-bold;
+    }
   }
 }

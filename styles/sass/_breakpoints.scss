@@ -1,0 +1,44 @@
+$standard-breakpoints: (
+        xsmall: 480px,
+        small: 640px,
+        medium: 800px,
+        large: 1024px,
+        xlarge: 1200px,
+        xxlarge: 1440px,
+);
+
+@mixin xsmallViewport  {
+  @media (max-width: map-get($standard-breakpoints, 'xsmall')) {
+    @content
+  }
+}
+
+@mixin smallViewport  {
+  @media (max-width: map-get($standard-breakpoints, 'small')) {
+    @content
+  }
+}
+
+@mixin mediumViewport {
+  @media (max-width: map-get($standard-breakpoints, 'medium')) {
+    @content
+  }
+}
+
+@mixin largeViewport {
+  @media (max-width: map-get($standard-breakpoints, 'large')) {
+    @content
+  }
+}
+
+@mixin xlargeViewport {
+  @media (max-width: map-get($standard-breakpoints, 'xlarge')) {
+    @content
+  }
+}
+
+@mixin xxlargeViewport {
+  @media (max-width: map-get($standard-breakpoints, 'xxlarge')) {
+    @content
+  }
+}
