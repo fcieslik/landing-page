@@ -9,13 +9,6 @@
 @import "weather";
 @import "breakpoints";
 
-body {
-  background: lightgray;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
 .main-page {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -33,6 +26,6 @@ body {
     grid-template-rows: max-content 1fr max-content;
     padding: 8px;
     grid-gap: 28px;
-    height: 100vh;
+    //height: 100vh;
   }
 }

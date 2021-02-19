@@ -4,6 +4,8 @@
   grid-column: 1 / 2;
   grid-row: 2;
   align-self: end;
+  display: grid;
+  grid-gap: 24px;
 
   &__text, &__abbreviation {
     @include xxlarge;
@@ -33,5 +35,11 @@
   .clock {
     grid-column: 1;
     grid-row: 2;
+    grid-gap: 16px;
+    align-self: center;
+
+    &__time {
+      font-size: 64px;
+    }
   }
 }
