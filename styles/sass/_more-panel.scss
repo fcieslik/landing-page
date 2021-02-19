@@ -79,4 +79,13 @@
     grid-row: 1;
     align-self: center;
   }
+
+  .more-panel {
+    margin-top: 25vh;
+    overflow-x: scroll;
+  }
+
+  .open {
+    grid-template-columns: 1fr;
+  }
 }
